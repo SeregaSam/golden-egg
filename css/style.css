@@ -62,7 +62,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-family: var(--main-font), sans-serif; 
+  font-family: var(--main-font), sans-serif;
+  font-weight: 400;
+  font-size: 16px; 
 }
 
 /* common components styles */
@@ -70,6 +72,11 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1198px;
+}
+
+.container_decorate-right {
+  padding: 0 96px 0 96px;
+  max-width: 1364px;
 }
 
 .main {
@@ -80,19 +87,27 @@ body {
   list-style-type: none;
 }
 
-.main-title {
+.main-title, .second-title {
   position: relative;
   margin: 0;
   padding: 0;
   padding-bottom: 40px; 
   color: var(--main-brand-color);
+  text-align: center;
   font-family: 'Kurale';
   font-size: 72px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-.main-title::after {
+.second-title {
+  line-height: 114%;
+  padding-bottom: 20px; 
+  font-size: 42px;
+  color: var(--dark-color);
+}
+
+.main-title::after, .second-title::after {
   content: '';
   display: block;
   border-radius: 50px;
@@ -136,6 +151,11 @@ body {
 .btn_outline:hover {
   color: var(--dark-color);
   background-color: var(--light-color);
+}
+
+.img {
+  border-radius: 5px;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.5);
 }
 /* end common components styles */
 
@@ -233,7 +253,6 @@ body {
 
 .hero__title {
   margin-bottom: 30px;
-  text-align: center;
 }
 
 .hero__socials {
@@ -302,6 +321,72 @@ body {
   fill: var(--main-brand-color);
 }
 /* end hero styles */
+
+/* about hero styles */
+.about {
+  padding: 92px 0 114px;
+}
+
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__content {
+  margin-right: 20px;
+  padding-top: 22px;
+  width: calc(100% - 105px);
+  max-width: 600px;
+  text-align: center;
+  line-height: 175%;
+}
+
+.about__title {
+   margin-bottom: 38px;
+}
+
+.about__preview-text {
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
+  padding-right: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 157%;
+}
+
+.about__content-text {
+  margin: 0;
+  margin-bottom: 26px;
+}
+
+.about__img-wrap {
+  position: relative;
+  max-width: 475px;
+  max-height: 475px;
+}
+
+.about__img {
+  object-fit: cover;
+  min-height: 100%;
+}
+
+.about__img-wrap::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  top: 52%;
+  right: 0;
+  border: 20px solid var(--main-brand-color);
+  display: block;
+  width: 52%;
+  height: 52%;
+  transform: translate(38%, -54%);
+}
+/* end about hero styles */
+
 
 
 
